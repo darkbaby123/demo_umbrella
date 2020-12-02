@@ -13,6 +13,8 @@ use Mix.Config
 config :demo,
   ecto_repos: [Demo.Repo]
 
+config :demo, Demo.Repo, migration_timestamps: [type: :naive_datetime_usec]
+
 config :demo_web,
   ecto_repos: [Demo.Repo],
   generators: [context_app: :demo]
