@@ -7,5 +7,7 @@ defmodule DemoWeb.Router do
 
   scope "/api", DemoWeb do
     pipe_through :api
+
+    resources "/collectors", CollectorController, except: [:new, :edit]
   end
 end
