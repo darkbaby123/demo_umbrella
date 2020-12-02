@@ -1,9 +1,9 @@
-defmodule Demo.MixProject do
+defmodule DemoCore.MixProject do
   use Mix.Project
 
   def project do
     [
-      app: :demo,
+      app: :demo_core,
       version: "0.1.0",
       build_path: "../../_build",
       config_path: "../../config/config.exs",
@@ -22,7 +22,7 @@ defmodule Demo.MixProject do
   # Type `mix help compile.app` for more information.
   def application do
     [
-      mod: {Demo.Application, []},
+      mod: {DemoCore.Application, []},
       extra_applications: [:logger, :runtime_tools]
     ]
   end
@@ -36,8 +36,9 @@ defmodule Demo.MixProject do
   # Type `mix help deps` for examples and options.
   defp deps do
     [
-      {:demo_core, in_umbrella: true},
-      {:phoenix_pubsub, "~> 2.0"}
+      {:ecto_sql, "~> 3.4"},
+      {:postgrex, ">= 0.0.0"},
+      {:jason, "~> 1.0"}
     ]
   end
 

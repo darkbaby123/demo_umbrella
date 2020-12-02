@@ -1,7 +1,7 @@
 use Mix.Config
 
 # Configure your database
-config :demo, Demo.Repo,
+config :demo_core, DemoCore.Repo,
   username: "postgres",
   password: "postgres",
   database: "demo_umbrella_dev",

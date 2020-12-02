@@ -5,7 +5,7 @@ defmodule Demo.Collectors do
 
   import Ecto.Query
 
-  alias Demo.Repo
+  alias DemoCore.Repo
   alias Demo.Collectors.Collector
 
   @doc """

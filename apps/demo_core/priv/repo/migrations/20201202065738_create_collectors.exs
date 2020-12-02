@@ -1,4 +1,4 @@
-defmodule Demo.Repo.Migrations.CreateCollectors do
+defmodule DemoCore.Repo.Migrations.CreateCollectors do
   use Ecto.Migration
 
   def change do

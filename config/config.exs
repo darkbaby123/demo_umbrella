@@ -11,12 +11,15 @@ use Mix.Config
 
 # Configure Mix tasks and generators
 config :demo,
-  ecto_repos: [Demo.Repo]
+  ecto_repos: [DemoCore.Repo]
 
-config :demo, Demo.Repo, migration_timestamps: [type: :naive_datetime_usec]
+config :demo_core,
+  ecto_repos: [DemoCore.Repo]
+
+config :demo_core, DemoCore.Repo, migration_timestamps: [type: :naive_datetime_usec]
 
 config :demo_web,
-  ecto_repos: [Demo.Repo],
+  ecto_repos: [DemoCore.Repo],
   generators: [context_app: :demo]
 
 # Configures the endpoint
