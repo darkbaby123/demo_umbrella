@@ -8,7 +8,7 @@ defmodule Demo.Collectors.Collector do
     field :curr_amount, :integer
     field :name, :string
 
-    timestamps()
+    timestamps type: :naive_datetime_usec
   end
 
   @doc false
