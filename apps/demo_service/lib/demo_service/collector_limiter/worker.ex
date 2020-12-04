@@ -25,6 +25,10 @@ defmodule DemoService.CollectorLimiter.Worker do
 
   @persist_interval 5_000
 
+  def start_link(init_arg, opts \\ []) do
+    GenServer.start_link(__MODULE__, init_arg, opts)
+  end
+
   @impl true
   def init(opts) do
     collector_id = Keyword.fetch!(opts, :collector_id)
